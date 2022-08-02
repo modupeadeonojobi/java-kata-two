@@ -32,4 +32,13 @@ public class BooleanCalTest {
         boolean result = calculator.evaluate("NOT FALSE");
         assertEquals(false, result);
     }
+
+    @Test
+    public void shouldConvertTrueAndFalseToBool() {
+        Calculator calculator = new Calculator();
+        boolean result = calculator.evaluate("TRUE AND FALSE");
+        assertEquals(false, result);
+    }
+
+
 }
