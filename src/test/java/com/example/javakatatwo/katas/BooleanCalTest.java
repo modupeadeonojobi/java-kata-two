@@ -11,9 +11,17 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BooleanCalTest {
 
     @Test
-    public void bool() {
+    public void shouldConvertStringTrueToBool() {
         Calculator calculator = new Calculator();
         boolean result = calculator.evaluate("TRUE");
         assertEquals(true, result);
+    }
+
+    @Test
+    public void shouldConvertStringFalseToBool() {
+        Calculator calculator= new Calculator();
+        boolean result = calculator.evaluate("FALSE");
+        assertEquals(false, result);
+
     }
 }
