@@ -7,20 +7,15 @@ public class PrimeFactor {
     public List<Integer> of(int number) {
         List<Integer> factors = new ArrayList<>();
 
-        int divider = 2;
-
-        // Still needs refactoring
-        while (number > 1) {
-
-            while (number % divider == 0) {
+        for  (int divider = 2; divider <= number;) {
+            if (number % divider == 0) {
                 factors.add(divider);
                 number /= divider;
             }
-
-            divider ++;
+            else {
+                divider++;
+            }
         }
-
         return factors;
-
     }
 }

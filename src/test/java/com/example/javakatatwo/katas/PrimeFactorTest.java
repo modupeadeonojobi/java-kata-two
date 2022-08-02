@@ -43,7 +43,6 @@ public class PrimeFactorTest {
 
     @Test
     public void givePrimedFactorsOf6(){
-
         PrimeFactor primeFactor = new PrimeFactor();
         List<Integer> primeNumbers = primeFactor.of(6);
         assertEquals(asList(2,3), primeNumbers);
@@ -51,7 +50,6 @@ public class PrimeFactorTest {
 
     @Test
     public void givePrimedFactorsOf9(){
-
         PrimeFactor primeFactor = new PrimeFactor();
         List<Integer> primeNumbers = primeFactor.of(9);
         assertEquals(asList(3,3), primeNumbers);
@@ -71,7 +69,12 @@ public class PrimeFactorTest {
         assertEquals(asList(3,5), primeNumbers);
     }
 
+    @Test
+    public void givePrimeFactorsOf() {
+        PrimeFactor primeFactor = new PrimeFactor();
+        List<Integer> primeNumerals = primeFactor.of(18);
+        assertEquals(asList(2, 3, 3), primeNumerals);
 
-
+    }
 }
 
