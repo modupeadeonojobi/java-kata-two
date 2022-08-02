@@ -1,5 +1,6 @@
 package com.example.javakatatwo.katas;
 
+import ch.qos.logback.classic.boolex.OnErrorEvaluator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,5 +24,12 @@ public class BooleanCalTest {
         boolean result = calculator.evaluate("FALSE");
         assertEquals(false, result);
 
+    }
+
+    @Test
+    public void shouldConvertNotTrueToBool(){
+        Calculator calculator = new Calculator();
+        boolean result = calculator.evaluate("NOT FALSE");
+        assertEquals(false, result);
     }
 }
