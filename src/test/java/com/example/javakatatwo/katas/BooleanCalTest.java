@@ -3,7 +3,7 @@ package com.example.javakatatwo.katas;
 import ch.qos.logback.classic.boolex.OnErrorEvaluator;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author iModupsy
@@ -15,30 +15,35 @@ public class BooleanCalTest {
     public void shouldConvertStringTrueToBool() {
         Calculator calculator = new Calculator();
         boolean result = calculator.evaluate("TRUE");
-        assertEquals(true, result);
+        assertTrue(result);
     }
 
     @Test
     public void shouldConvertStringFalseToBool() {
         Calculator calculator= new Calculator();
         boolean result = calculator.evaluate("FALSE");
-        assertEquals(false, result);
+        assertFalse(result);
 
     }
 
     @Test
-    public void shouldConvertNotTrueToBool(){
+    public void shouldConvertNotFalseToBool(){
         Calculator calculator = new Calculator();
         boolean result = calculator.evaluate("NOT FALSE");
-        assertEquals(false, result);
+        assertTrue(result);
     }
 
     @Test
     public void shouldConvertTrueAndFalseToBool() {
         Calculator calculator = new Calculator();
         boolean result = calculator.evaluate("TRUE AND FALSE");
-        assertEquals(false, result);
+        assertFalse(result);
     }
 
-
+    @Test
+    public void shouldConvertTrueAndTrueToBool() {
+        Calculator calculator = new Calculator();
+        boolean result = calculator.evaluate("TRUE AND TRUE");
+        assertTrue(result);
+    }
 }
